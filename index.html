@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./sky.jpg">
+</head>
+
+<body>
+    <main>
+        <div id="left">
+            <!--头像-->
+            <div id="head-photo">
+                <img src="./sky.jpg" width="200px">
+            </div>
+            
+            <!--时间和地点-->
+            <div id="ip" class="card">
+                <div id="clock">...</div>
+                <img src="./svg/where.svg" width="20px" height="20px">
+                <span>Chaozhou</span>
+                <br>
+                <img src="./svg/date.svg" width="20px" height="20px">
+                <span id="date">...</span>
+            </div>
+
+            <!--爱好-->
+            <div id="habit" class="card">
+                <ul>
+                    <li>
+                        <span>初中生</span>
+                        <span>编程</span>
+                        <span>羽毛球</span>
+                    </li>
+                    <li>
+                        <span>健身</span>
+                        <span>自律</span>
+                        <span>Phonk</span>
+                    </li>
+                    <li>
+                        <span>Linux</span>
+                        <span>前端</span>
+                        <span>后端</span>
+                    </li>
+                </ul>
+            </div>
+            <!--生日倒计时-->
+            <div id="birthday" class="card">
+                <img src="./svg/cake.svg" width="20px" height="20px">
+                <span style="font-size: 18px;">生日倒计时</span>
+                <br>
+                <span id="birthday-content">29</span>
+                <span style="font-size: 23px;">天</span>
+            </div>
+        </div>
+        <div id="right">
+            <p id="welcome-text" style="text-shadow: 0px 0px 5px white;">Hello I' m 
+                <span id="my-name">Lin Sifan.</span>
+            </p>
+            <p id="introduction" class="welcome-mini-text">👦 A 
+                <span style="color: rgb(243, 247, 58);">happy</span>
+                 Student like the 
+                 <span style="color: rgb(243, 247, 58);;">sun</span>.
+            </p>
+            <p id="saying" class="welcome-mini-text">🌱 
+                <span style="color: rgb(101, 211, 87);">Sow</span>
+                 nothing, 
+                 <span style="color: rgb(128, 109, 0);">Reap</span>
+                 nothing.
+            </p>
+
+            <div style="display: flex;">
+                <!--音乐播放-->
+                <div id="music-card">
+                    <audio src="./在你的身边-盛哲.mp3" id="music"></audio>
+                    <p id="music-name">在你的身边</p>
+                    <div id="music-button">
+                        <img src="./svg/music-before.svg" width="20px" height="20px" style="position: relative; bottom: -7px;">
+                        <img src="./svg/music-start.svg" width="35px" height="35px" onclick="playMusic()" id="music-play">
+                        <img src="./svg/music-after.svg" width="20px" height="20px" style="position: relative; bottom: -7px;">
+                    </div>
+                </div>
+
+                <!--我的社交分享-->
+                <div id="share">
+                    <img src="./svg/github.svg" width="22px" height="22px">
+                    <img src="./svg/wechat.svg" width="22px" height="22px">
+                    <img src="./svg/qq.svg" width="22px" height="22px">
+                    <img src="./svg/email.svg" width="22px" height="22px">
+                    <img src="./svg/steam.svg" width="22px" height="22px">
+                    <img src="./svg/heart.svg" width="22px" height="22px">
+                    <img src="./svg/share.svg" width="22px" height="22px">
+                    <img src="./svg/game.svg" alt="22px" height="22px">
+                    <img src="./svg/tool.svg" alt="22px" height="22px">
+                    <img src="./svg/light.svg" alt="22px" height="22px">
+                </div>
+            </div>
+            
+            <div style="display: flex;">
+                <!--计划-->
+                <div id="plan">
+                    <div id="plan-head">
+                        <span>个 人 目 标</span>
+                    </div> 
+                    <div id="plan-screen">
+                        <div class="plan-line">
+                            <span>学算法</span>
+                            <span>大肌肉</span>
+                        </div>
+                        <div class="plan-line">
+                            <span>做游戏</span>
+                            <span>买球拍</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 160px; height: 130px;margin-top: 25px;margin-left: 30px;">
+                    <!--星期-->
+                    <div id="week"></div>
+                    <!--问好-->
+                    <div id="greet" style="margin-top: 30px; font-size: 18px;"></div>
+                </div>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+    <script src="https://api.vvhan.com/api/script/bolang"></script>
+</body>
+
+</html>
